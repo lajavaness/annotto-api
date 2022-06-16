@@ -1,7 +1,7 @@
 {
   "name": "annotto-api",
   "description": "API for Annotto Web Tool",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "La Javaness <dev@lajavaness.com>",
   "repository": "git@github.com:lajavaness/annotto-api.git",
   "license": "apache-2.0",
