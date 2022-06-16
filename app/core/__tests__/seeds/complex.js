@@ -1,0 +1,111 @@
+const {
+  Types: { ObjectId },
+} = require('mongoose')
+
+const idRA = ObjectId()
+const idRB = ObjectId()
+const idRA01 = ObjectId()
+const idBAR = ObjectId()
+const idFOO = ObjectId()
+const idAggressive = ObjectId()
+const idNer1 = ObjectId()
+const idZone1 = ObjectId()
+
+module.exports = [
+  {
+    parents: [],
+    type: 'classifications',
+    _id: idRA,
+    value: 'RA',
+    hotkey: 'A',
+    label: 'Category RA',
+    category: 'level1',
+    updatedAt: '2020-08-25T14:52:22.157Z',
+    createdAt: '2020-08-25T14:52:22.157Z',
+    __v: 0,
+  },
+  {
+    parents: [idFOO],
+    type: 'classifications',
+    _id: idBAR,
+    value: 'BAR',
+    hotkey: 'X',
+    label: 'BAR',
+    category: 'level1',
+    updatedAt: '2020-08-25T14:52:22.160Z',
+    createdAt: '2020-08-25T14:52:22.160Z',
+    __v: 0,
+  },
+  {
+    parents: [idRA, idRB],
+    type: 'classifications',
+    _id: idFOO,
+    value: 'FOO',
+    hotkey: 'Z',
+    label: 'FOO',
+    category: 'level1',
+    updatedAt: '2020-08-25T14:52:22.159Z',
+    createdAt: '2020-08-25T14:52:22.159Z',
+    __v: 0,
+  },
+  {
+    parents: [idRA],
+    type: 'classifications',
+    _id: idRA01,
+    value: 'RA01',
+    hotkey: 'B',
+    label: 'Category RA01',
+    category: 'level1',
+    updatedAt: '2020-08-25T14:52:22.161Z',
+    createdAt: '2020-08-25T14:52:22.161Z',
+    __v: 0,
+  },
+  {
+    parents: [],
+    type: 'classifications',
+    _id: idRB,
+    value: 'RB',
+    hotkey: 'C',
+    label: 'Category RB',
+    category: 'level1',
+    updatedAt: '2020-08-25T14:52:22.161Z',
+    createdAt: '2020-08-25T14:52:22.161Z',
+    __v: 0,
+  },
+  {
+    parents: [],
+    type: 'classifications',
+    _id: idAggressive,
+    value: 'Aggressive',
+    hotkey: 'D',
+    label: 'agg',
+    category: 'Tone',
+    updatedAt: '2020-08-25T14:52:22.161Z',
+    createdAt: '2020-08-25T14:52:22.161Z',
+    __v: 0,
+  },
+  {
+    parents: [],
+    type: 'ner',
+    _id: idNer1,
+    value: 'NER1',
+    hotkey: 'E',
+    label: 'Category NER1',
+    category: 'NER-level1',
+    updatedAt: '2020-08-25T14:52:22.163Z',
+    createdAt: '2020-08-25T14:52:22.163Z',
+    __v: 0,
+  },
+  {
+    parents: [],
+    type: 'zone',
+    _id: idZone1,
+    value: 'ZONE1',
+    hotkey: 'F',
+    label: 'Category ZONE1',
+    category: 'zone-level1',
+    updatedAt: '2020-08-25T14:52:22.163Z',
+    createdAt: '2020-08-25T14:52:22.163Z',
+    __v: 0,
+  },
+]

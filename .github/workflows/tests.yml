@@ -1,0 +1,46 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+    branches: [ main, next ]
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: Install Yarn
+        run: npm install -g yarn
+      - name: Start environment to tests
+        run: docker-compose up -d
+      - name: Install dependencies
+        run: yarn install
+      - run: yarn test:ci
+      - name: Stop containers
+        if: always()
+        run: docker-compose down
+
+  integration-tests:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run Integrations tests
+        run: cd tests/integration && docker-compose up --abort-on-container-exit --exit-code-from annotto-api --build
+
+      - name: Stop containers
+        if: always()
+        run: docker-compose down
