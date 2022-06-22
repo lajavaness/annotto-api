@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/lajavaness/annotto-api/compare/v1.0.0...v1.0.1) (2022-06-22)
+
+
+### Bug Fixes
+
+* Fix undefined task properties in project config, [#1](https://github.com/lajavaness/annotto-api/issues/1) ([f84713e](https://github.com/lajavaness/annotto-api/commit/f84713e4724dc2cc65c7fb837ad6674930ca819a))
+
 # 1.0.0 (2022-06-16)
 
 
