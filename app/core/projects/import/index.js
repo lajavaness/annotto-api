@@ -14,6 +14,7 @@ const {
   handleItemPredictionStream,
   handleAnnotationsImportStream,
 } = require('../../file-upload/stream-handler')
+const { projectConfigV2Schema } = require('../../../router/validation/project')
 
 const importAllFromFiles = async ({
   projectFile,
@@ -83,6 +84,7 @@ const createProject = async ({ file, _user, renameIfDuplicateName = false }) => 
   try {
     const configStream = await fs.readFile(file.path, 'utf8')
     config = JSON.parse(configStream)
+    projectConfigV2Schema.validate(config)
   } catch (error) {
     logger.info(error)
     logger.error(error.stack)
