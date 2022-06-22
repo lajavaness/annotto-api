@@ -199,7 +199,7 @@ const createProjectAndTasks = async ({ config, _user }) => {
   const projectId = mongoose.Types.ObjectId()
   const admins = []
   const tasksToInsert = new Map()
-  config.tasks.forEach((task) => {
+  config.tasks?.forEach((task) => {
     const _id = mongoose.Types.ObjectId()
     tasksToInsert.set(_id, {
       _id,
