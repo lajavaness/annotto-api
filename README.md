@@ -85,7 +85,7 @@ We ensure consistent code formatting with [Prettier](https://prettier.io), code 
 
 Incoming code must not cause existing tests to fail; that rule is enforced with a precommit hook.
 
-Code should be pushed to a ``feature/*`` or ``fix/*`` branch based on the type of change made, and a Pull Request made against the develop branch. A fellow developer must approve the PR before it can be merged.
+Code should be pushed to a ``feature/*`` or ``fix/*`` branch based on the type of change made, and a Pull Request made against the next branch. A fellow developer must approve the PR before it can be merged.
 
 ### Commits
 
