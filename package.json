@@ -70,7 +70,7 @@
     "lodash": "^4.17.19",
     "mongoose": "^5.10.0",
     "morgan": "^1.10.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "passport": "^0.4.1",
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
