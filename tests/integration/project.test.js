@@ -543,7 +543,7 @@ describe('projects', () => {
         hotkey: 'b',
         value: 'foo',
         type: 'classifications',
-        parents: ['bbox_name'],
+        conditions: ['updatedNameLabel'],
       }
       // parent is one of new classifications
       const newTask2 = {
@@ -552,7 +552,7 @@ describe('projects', () => {
         hotkey: 'c',
         value: 'bar',
         type: 'classifications',
-        parents: ['foo'],
+        conditions: ['foo'],
       }
       // new classif with no parent
       const newTask3 = {
@@ -588,36 +588,6 @@ describe('projects', () => {
 
       expect(foo.value).toBe('foo')
       expect(bar.value).toBe('bar')
-
-      // expect(name.parents).toHaveLength(0)
-      // expect(foo.parents).toHaveLength(1)
-      // expect(foo.parents[0]).toBe('bbox_name')
-      // expect(bar.parents[0]).toBe('foo')
-    })
-
-    test('400 Create new classif with non existing parent', async () => {
-      const project = await createSeedProject(JWT)
-
-      const newTask = {
-        label: 'foo',
-        category: 'bbox',
-        hotkey: 'a',
-        type: 'classifications',
-        value: 'foo',
-        parents: ['BAR'],
-      }
-
-      const payload = {
-        name: 'myProject',
-        defaultTags,
-        tasks: [newTask],
-      }
-
-      return supertest(app)
-        .put(`/api/projects/${project._id}`)
-        .set('Authorization', `Bearer ${JWT}`)
-        .send(payload)
-        .expect(400)
     })
 
     test('Update only highlights', async () => {
@@ -1161,32 +1131,32 @@ describe('projects', () => {
     expect(relationsExport).toHaveLength(nerAndRelationAnnotation.entitiesRelations.length)
 
     /*
-       Assert that for annotation payload :
-       {
-            "src": {
-                "value": "classif1",
-                "ner": {
-                    "start": 230,
-                    "end": 241
-                }
-            },
-            "dest": {
-                "value": "classif2",
-                "ner": {
-                    "start": 242,
-                    "end": 248
-                }
-            },
-            "value": "is_line_extremity"
-        }
+			 Assert that for annotation payload :
+			 {
+						"src": {
+								"value": "classif1",
+								"ner": {
+										"start": 230,
+										"end": 241
+								}
+						},
+						"dest": {
+								"value": "classif2",
+								"ner": {
+										"start": 242,
+										"end": 248
+								}
+						},
+						"value": "is_line_extremity"
+				}
 
-        export .relations is :
-        {
-          "label": "is_line_extremity",
-          "src": 0, // id of this classif1 ner annotation in export .annotations
-          "dest": 1 // id of this classif2 ner annotation in export .annotations
-        }
-    */
+				export .relations is :
+				{
+					"label": "is_line_extremity",
+					"src": 0, // id of this classif1 ner annotation in export .annotations
+					"dest": 1 // id of this classif2 ner annotation in export .annotations
+				}
+		*/
     const expectedRelationsExport = nerAndRelationAnnotation.entitiesRelations.map((relation) => {
       const src = annotationsExport.entities.find(
         (e) =>
