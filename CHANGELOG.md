@@ -1,3 +1,5 @@
+## [1.0.19](https://github.com/lajavaness/annotto-api/compare/v1.0.18...v1.0.19) (2022-07-11)
+
 ## [1.0.18](https://github.com/lajavaness/annotto-api/compare/v1.0.17...v1.0.18) (2022-06-29)
 
 ## [1.0.17](https://github.com/lajavaness/annotto-api/compare/v1.0.16...v1.0.17) (2022-06-29)
