@@ -37,7 +37,7 @@
          "__v": 0
       }
    ],
-   "name": "Relation extraction for brotha AJ",
+   "name": "DEMO: Relation extraction",
    "client": "LJN",
    "type": "text",
    "guidelines": "See https://github.com/roomylee/awesome-relation-extraction#datasets and https://aclanthology.org/S10-1006/",
