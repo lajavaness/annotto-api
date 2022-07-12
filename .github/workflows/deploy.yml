@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 16.x ]
+        node-version: [16.x]
       fail-fast: true
     steps:
       - uses: actions/checkout@v3
@@ -34,7 +34,7 @@ jobs:
     timeout-minutes: 30
     strategy:
       matrix:
-        node-version: [ 16.x ]
+        node-version: [16.x]
       fail-fast: true
     steps:
       - name: Checkout
@@ -56,7 +56,10 @@ jobs:
       - integration-tests
     strategy:
       matrix:
-        node-version: [ 16.x ]
+        node-version: [16.x]
+    outputs:
+      is-new-version: ${{ steps.version.outputs.new_release_published }}
+      version: ${{ steps.version.outputs.new_release_version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -66,47 +69,51 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
-        run: yarn install
       - name: Semantic Release
-        run: npx semantic-release
+        id: version
+        uses: cycjimmy/semantic-release-action@v3
+        with:
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+            @semantic-release/github
         env:
           GITHUB_TOKEN: ${{ secrets.GH_SR_TOKEN }}
 
-  build-and-push-image:
+  docker-build-and-push:
     runs-on: ubuntu-latest
     if: contains('
       refs/heads/main
       refs/heads/next
-      ', github.ref) && github.event_name != 'pull_request'
+      ', github.ref) && github.event_name != 'pull_request' && needs.semantic-release.outputs.is-new-version == 'true'
     needs:
       - semantic-release
     strategy:
       matrix:
-        node-version: [ 16.x ]
+        node-version: [16.x]
     permissions:
       contents: read
       packages: write
+    env:
+      IMAGE: ${{ secrets.DOCKER_REGISTRY }}/annotto-api
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Log in to the Container registry
-        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+        uses: docker/login-action@v2
         with:
           registry: ${{ secrets.DOCKER_REGISTRY }}
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-      - name: Extract metadata (tags, labels) for Docker
+      - name: Extract Docker metadata
         id: meta
-        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
+        uses: docker/metadata-action@v4
         with:
-          images: ${{ secrets.DOCKER_REGISTRY }}/${{ env.IMAGE_NAME }}
-        env:
-          IMAGE_NAME: "annotto-api"
+          images: ${{ env.IMAGE }}
       - name: Build and push Docker image
-        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        uses: docker/build-push-action@v3
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ env.IMAGE }}:latest , ${{ env.IMAGE }}:${{ needs.semantic-release.outputs.version }}
           labels: ${{ steps.meta.outputs.labels }}
