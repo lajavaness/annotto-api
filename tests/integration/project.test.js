@@ -19,56 +19,56 @@ const cwd = process.cwd()
 const DEMOS = [
   {
     // 0
-    config: `${cwd}/statics/demo/demo-zone+ocr/config.json`,
-    items: `${cwd}/statics/demo/demo-zone+ocr/items.jsonlines`,
-    predictions: `${cwd}/statics/demo/demo-zone+ocr/predictions.jsonlines`,
+    config: `${cwd}/tests/integration/seed/demo/demo-zone+ocr/config.json`,
+    items: `${cwd}/tests/integration/seed/demo/demo-zone+ocr/items.jsonlines`,
+    predictions: `${cwd}/tests/integration/seed/demo/demo-zone+ocr/predictions.jsonlines`,
   },
   {
     // 1
-    config: `${cwd}/statics/demo/demo-zone+classification-public-image/config.json`,
-    items: `${cwd}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
-    predictions: `${cwd}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+    config: `${cwd}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
+    items: `${cwd}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
+    predictions: `${cwd}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
   },
   {
     // 2
-    config: `${cwd}/statics/demo/demo-nerWithRelations/config.json`,
-    items: `${cwd}/statics/demo/demo-nerWithRelations/items.jsonlines`,
-    predictions: `${cwd}/statics/demo/demo-nerWithRelations/predictions.jsonlines`,
+    config: `${cwd}/tests/integration/seed/demo/demo-nerWithRelations/config.json`,
+    items: `${cwd}/tests/integration/seed/demo/demo-nerWithRelations/items.jsonlines`,
+    predictions: `${cwd}/tests/integration/seed/demo/demo-nerWithRelations/predictions.jsonlines`,
   },
   {
     // 3
-    config: `${cwd}/statics/demo/demo-classification-text-1/config.json`,
-    items: `${cwd}/statics/demo/demo-classification-text-1/items.jsonlines`,
-    predictions: `${cwd}/statics/demo/demo-classification-text-1/predictions.jsonlines`,
+    config: `${cwd}/tests/integration/seed/demo/demo-classification-text-1/config.json`,
+    items: `${cwd}/tests/integration/seed/demo/demo-classification-text-1/items.jsonlines`,
+    predictions: `${cwd}/tests/integration/seed/demo/demo-classification-text-1/predictions.jsonlines`,
   },
   {
     // 4
-    config: `${cwd}/statics/demo/demo-ner+classification-text/config.json`,
-    items: `${cwd}/statics/demo/demo-ner+classification-text/items.jsonlines`,
-    predictions: `${cwd}/statics/demo/demo-ner+classification-text/predictions.jsonlines`,
+    config: `${cwd}/tests/integration/seed/demo/demo-ner+classification-text/config.json`,
+    items: `${cwd}/tests/integration/seed/demo/demo-ner+classification-text/items.jsonlines`,
+    predictions: `${cwd}/tests/integration/seed/demo/demo-ner+classification-text/predictions.jsonlines`,
   },
   {
     // 5
-    config: `${cwd}/statics/demo/demo-zone+classification-public-image/config.json`,
-    items: `${cwd}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
-    predictions: `${cwd}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+    config: `${cwd}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
+    items: `${cwd}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
+    predictions: `${cwd}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
   },
   {
     // 6
-    config: `${cwd}/statics/demo/demo-classification-public-image/config.json`,
-    items: `${cwd}/statics/demo/demo-classification-public-image/items.jsonlines`,
+    config: `${cwd}/tests/integration/seed/demo/demo-classification-public-image/config.json`,
+    items: `${cwd}/tests/integration/seed/demo/demo-classification-public-image/items.jsonlines`,
   },
   {
     // 7
-    config: `${cwd}/statics/demo/demo-zone+annotations/config.json`,
-    items: `${cwd}/statics/demo/demo-zone+annotations/items.jsonlines`,
-    annotations: `${cwd}/statics/demo/demo-zone+annotations/annotations.jsonlines`,
+    config: `${cwd}/tests/integration/seed/demo/demo-zone+annotations/config.json`,
+    items: `${cwd}/tests/integration/seed/demo/demo-zone+annotations/items.jsonlines`,
+    annotations: `${cwd}/tests/integration/seed/demo/demo-zone+annotations/annotations.jsonlines`,
   },
   {
     // 8
-    config: `${cwd}/statics/demo/demo-nerWithRelations-2/config.json`,
-    items: `${cwd}/statics/demo/demo-nerWithRelations-2/items.jsonlines`,
-    annotations: `${cwd}/statics/demo/demo-nerWithRelations-2/annotations.jsonlines`,
+    config: `${cwd}/tests/integration/seed/demo/demo-nerWithRelations-2/config.json`,
+    items: `${cwd}/tests/integration/seed/demo/demo-nerWithRelations-2/items.jsonlines`,
+    annotations: `${cwd}/tests/integration/seed/demo/demo-nerWithRelations-2/annotations.jsonlines`,
   },
 ]
 

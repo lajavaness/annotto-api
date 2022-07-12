@@ -14,45 +14,45 @@ let projectDatascientistJWT
 let app
 
 const DEMO_WITH_USER_THAT_DONT_EXIST = {
-  config: `${process.cwd()}/statics/demo/demo-zone+ocr_with_user_that_dont_exist/config.json`,
-  items: `${process.cwd()}/statics/demo/demo-zone+ocr_with_user_that_dont_exist/items.jsonlines`,
-  predictions: `${process.cwd()}/statics/demo/demo-zone+ocr_with_user_that_dont_exist/predictions.jsonlines`,
+  config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/config.json`,
+  items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/items.jsonlines`,
+  predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/predictions.jsonlines`,
 }
 
 const DEMOS = [
   {
-    config: `${process.cwd()}/statics/demo/demo-zone+ocr/config.json`,
-    items: `${process.cwd()}/statics/demo/demo-zone+ocr/items.jsonlines`,
-    predictions: `${process.cwd()}/statics/demo/demo-zone+ocr/predictions.jsonlines`,
+    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/config.json`,
+    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/items.jsonlines`,
+    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/predictions.jsonlines`,
   },
   {
-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
+    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
+    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
   },
   {
-    config: `${process.cwd()}/statics/demo/demo-nerWithRelations/config.json`,
-    items: `${process.cwd()}/statics/demo/demo-nerWithRelations/items.jsonlines`,
-    predictions: `${process.cwd()}/statics/demo/demo-nerWithRelations/predictions.jsonlines`,
+    config: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/config.json`,
+    items: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/items.jsonlines`,
+    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/predictions.jsonlines`,
   },
   {
-    config: `${process.cwd()}/statics/demo/demo-classification-text-1/config.json`,
-    items: `${process.cwd()}/statics/demo/demo-classification-text-1/items.jsonlines`,
-    predictions: `${process.cwd()}/statics/demo/demo-classification-text-1/predictions.jsonlines`,
+    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/config.json`,
+    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/items.jsonlines`,
+    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/predictions.jsonlines`,
   },
   {
-    config: `${process.cwd()}/statics/demo/demo-ner+classification-text/config.json`,
-    items: `${process.cwd()}/statics/demo/demo-ner+classification-text/items.jsonlines`,
-    predictions: `${process.cwd()}/statics/demo/demo-ner+classification-text/predictions.jsonlines`,
+    config: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/config.json`,
+    items: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/items.jsonlines`,
+    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/predictions.jsonlines`,
   },
   {
-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
+    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
+    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
   },
   {
-    config: `${process.cwd()}/statics/demo/demo-classification-public-image/config.json`,
-    items: `${process.cwd()}/statics/demo/demo-classification-public-image/items.jsonlines`,
+    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/config.json`,
+    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/items.jsonlines`,
   },
 ]
 
