@@ -13,7 +13,6 @@ const idZone1 = ObjectId()
 
 module.exports = [
   {
-    parents: [],
     type: 'classifications',
     _id: idRA,
     value: 'RA',
@@ -25,7 +24,7 @@ module.exports = [
     __v: 0,
   },
   {
-    parents: [idFOO],
+    condition: ['FOO'],
     type: 'classifications',
     _id: idBAR,
     value: 'BAR',
@@ -37,7 +36,7 @@ module.exports = [
     __v: 0,
   },
   {
-    parents: [idRA, idRB],
+    conditions: ['Category RA', 'Category RB'],
     type: 'classifications',
     _id: idFOO,
     value: 'FOO',
@@ -49,7 +48,7 @@ module.exports = [
     __v: 0,
   },
   {
-    parents: [idRA],
+    conditions: ['Category RA'],
     type: 'classifications',
     _id: idRA01,
     value: 'RA01',
@@ -61,7 +60,6 @@ module.exports = [
     __v: 0,
   },
   {
-    parents: [],
     type: 'classifications',
     _id: idRB,
     value: 'RB',
@@ -73,7 +71,6 @@ module.exports = [
     __v: 0,
   },
   {
-    parents: [],
     type: 'classifications',
     _id: idAggressive,
     value: 'Aggressive',
@@ -85,7 +82,6 @@ module.exports = [
     __v: 0,
   },
   {
-    parents: [],
     type: 'ner',
     _id: idNer1,
     value: 'NER1',
@@ -97,7 +93,6 @@ module.exports = [
     __v: 0,
   },
   {
-    parents: [],
     type: 'zone',
     _id: idZone1,
     value: 'ZONE1',

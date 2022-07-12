@@ -107,17 +107,14 @@ describe('Projects statics', () => {
   const parent = {
     _id: ObjectId(),
     value: 'RA',
-    parents: [],
   }
 
   const child = {
     _id: ObjectId(),
     value: 'RA_01',
-    parents: [parent],
   }
 
   const tasks = [parent, child]
-  tasks[1].parents = [tasks[0]._id]
 
   test('validateIdsWithProject - valid', () => {
     const annotations = {
