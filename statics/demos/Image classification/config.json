@@ -1,0 +1,102 @@
+{
+   "tasks": [
+      {
+         "conditions": [],
+         "exposed": true,
+         "type": "classifications",
+         "annotationPourcent": 67,
+         "annotationCount": 2,
+         "_id": "62bc1ffd4c09f1001dfb16fe",
+         "project": "62bc1ffd4c09f1001dfb16fd",
+         "description": "front",
+         "color": "#ff7a45",
+         "value": "front",
+         "hotkey": "f",
+         "label": "front",
+         "category": "Image classification",
+         "updatedAt": "2022-06-29T09:48:45.920Z",
+         "createdAt": "2022-06-29T09:48:45.920Z",
+         "__v": 0
+      },
+      {
+         "conditions": [],
+         "exposed": true,
+         "type": "classifications",
+         "annotationPourcent": 67,
+         "annotationCount": 2,
+         "_id": "62bc1ffd4c09f1001dfb16ff",
+         "project": "62bc1ffd4c09f1001dfb16fd",
+         "description": "back",
+         "color": "#ffec3d",
+         "value": "back",
+         "hotkey": "b",
+         "label": "back",
+         "category": "Image classification",
+         "updatedAt": "2022-06-29T09:48:45.920Z",
+         "createdAt": "2022-06-29T09:48:45.920Z",
+         "__v": 0
+      },
+      {
+         "conditions": [],
+         "exposed": true,
+         "type": "classifications",
+         "annotationPourcent": 67,
+         "annotationCount": 2,
+         "_id": "62bc1ffd4c09f1001dfb1700",
+         "project": "62bc1ffd4c09f1001dfb16fd",
+         "description": "left",
+         "color": "#73d13d",
+         "value": "left",
+         "hotkey": "l",
+         "label": "left",
+         "category": "Image classification",
+         "updatedAt": "2022-06-29T09:48:45.920Z",
+         "createdAt": "2022-06-29T09:48:45.920Z",
+         "__v": 0
+      },
+      {
+         "conditions": [],
+         "exposed": true,
+         "type": "classifications",
+         "annotationPourcent": 34,
+         "annotationCount": 1,
+         "_id": "62bc1ffd4c09f1001dfb1701",
+         "project": "62bc1ffd4c09f1001dfb16fd",
+         "description": "right",
+         "color": "#ff4d4f",
+         "value": "right",
+         "hotkey": "r",
+         "label": "right",
+         "category": "Image classification",
+         "updatedAt": "2022-06-29T09:48:45.920Z",
+         "createdAt": "2022-06-29T09:48:45.921Z",
+         "__v": 0
+      }
+   ],
+   "name": "Image classification test",
+   "client": "LJN",
+   "type": "image",
+   "highlights": [],
+   "description": "Image classification test",
+   "admins": [
+      "data@test.com"
+   ],
+   "users": [],
+   "dataScientists": [],
+   "defaultTags": [
+      "To delete",
+      "To check",
+      "To discuss",
+      "duplicate",
+      "quality"
+   ],
+   "showPredictions": true,
+   "prefillPredictions": true,
+   "filterPredictionsMinimum": 0.4,
+   "deadline": "2022-08-31T09:06:02.944Z",
+   "entitiesRelationsGroup": [],
+   "s3": {
+      "accessKeyId": "YOUR_ACCESS_KEY",
+      "secretAccessKey": "YOUR_SECRET_KEY"
+   }
+}

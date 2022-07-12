@@ -1,0 +1,149 @@
+{
+   "tasks": [
+      {
+         "conditions": [],
+         "exposed": true,
+         "type": "ner",
+         "annotationPourcent": 100,
+         "annotationCount": 5,
+         "_id": "62b5cbc0119920001cadc7ff",
+         "project": "62b5cbc0119920001cadc7fe",
+         "description": "Entity 1",
+         "color": "#40a9ff",
+         "value": "e1",
+         "hotkey": "a",
+         "label": "e1",
+         "category": "NER",
+         "updatedAt": "2022-06-24T14:35:44.930Z",
+         "createdAt": "2022-06-24T14:35:44.930Z",
+         "__v": 0
+      },
+      {
+         "conditions": [],
+         "exposed": true,
+         "type": "ner",
+         "annotationPourcent": 100,
+         "annotationCount": 5,
+         "_id": "62b5cbc0119920001cadc800",
+         "project": "62b5cbc0119920001cadc7fe",
+         "description": "Entity 2",
+         "color": "#ff4d4f",
+         "value": "e2",
+         "hotkey": "p",
+         "label": "e2",
+         "category": "NER",
+         "updatedAt": "2022-06-24T14:35:44.930Z",
+         "createdAt": "2022-06-24T14:35:44.930Z",
+         "__v": 0
+      }
+   ],
+   "name": "Relation extraction for brotha AJ",
+   "client": "LJN",
+   "type": "text",
+   "guidelines": "See https://github.com/roomylee/awesome-relation-extraction#datasets and https://aclanthology.org/S10-1006/",
+   "highlights": [],
+   "description": "blablabla",
+   "admins": [
+      "achille@lajavaness.com"
+   ],
+   "users": [],
+   "dataScientists": [],
+   "defaultTags": [
+      "To delete",
+      "To check",
+      "To discuss"
+   ],
+   "showPredictions": true,
+   "prefillPredictions": true,
+   "filterPredictionsMinimum": 0.4,
+   "deadline": "2022-07-22T14:26:41.561Z",
+   "entitiesRelationsGroup": [
+      {
+         "_id": "62b5cbc0119920001cadc804",
+         "name": "Relation extraction",
+         "values": [
+            {
+               "exposed": true,
+               "_id": "62b5cbc0119920001cadc805",
+               "label": "Component-Whole",
+               "value": "component_whole",
+               "color": "#ff7a45",
+               "hotkey": "w",
+               "description": "Component-Whole"
+            },
+            {
+               "exposed": true,
+               "_id": "62b5cbc0119920001cadc806",
+               "label": "Instrument-Agency",
+               "value": "instrument_agency",
+               "color": "#fa8c16",
+               "hotkey": "i",
+               "description": "Instrument-Agency"
+            },
+            {
+               "exposed": true,
+               "_id": "62b5cbc0119920001cadc807",
+               "label": "Member-Collection",
+               "value": "member_collection",
+               "color": "#ffd666",
+               "hotkey": "m",
+               "description": "Member-Collection"
+            },
+            {
+               "exposed": true,
+               "_id": "62b5cbc0119920001cadc808",
+               "label": "Cause-Effect",
+               "value": "cause_effect",
+               "color": "#bae637",
+               "hotkey": "c",
+               "description": "Cause-Effect"
+            },
+            {
+               "exposed": true,
+               "_id": "62b5cbc0119920001cadc809",
+               "label": "Entity-Destination",
+               "value": "entity_destination",
+               "color": "#73d13d",
+               "hotkey": "e",
+               "description": "Entity-Destination"
+            },
+            {
+               "exposed": true,
+               "_id": "62b5cbc0119920001cadc80a",
+               "label": "Content-Container",
+               "value": "content_container",
+               "color": "#597ef7",
+               "hotkey": "n",
+               "description": "Content-Container"
+            },
+            {
+               "exposed": true,
+               "_id": "62b5cbc0119920001cadc80b",
+               "label": "Message-Topic",
+               "value": "message_topic",
+               "color": "#f759ab",
+               "hotkey": "s",
+               "description": "Message-Topic"
+            },
+            {
+               "exposed": true,
+               "_id": "62b5cbc0119920001cadc80c",
+               "label": "Product-Producer",
+               "value": "product_producer",
+               "color": "#ff4d4f",
+               "hotkey": "r",
+               "description": "Product-Producer"
+            },
+            {
+               "exposed": true,
+               "_id": "62b5cbc0119920001cadc80d",
+               "label": "Entity-Origin",
+               "value": "entity_origin",
+               "color": "#36cfc9",
+               "hotkey": "o",
+               "description": "Entity-Origin"
+            }
+         ]
+      }
+   ]
+}

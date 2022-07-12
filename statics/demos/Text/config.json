@@ -1,0 +1,47 @@
+{
+   "tasks": [
+      {
+         "conditions": [],
+         "exposed": true,
+         "type": "text",
+         "annotationPourcent": 100,
+         "annotationCount": 2,
+         "_id": "62bc1e7a4c09f1001dfb16e6",
+         "project": "62bc1e7a4c09f1001dfb16e5",
+         "description": "text",
+         "color": null,
+         "value": "text",
+         "label": "text",
+         "category": "text",
+         "updatedAt": "2022-06-29T09:42:18.688Z",
+         "createdAt": "2022-06-29T09:42:18.688Z",
+         "__v": 0
+      }
+   ],
+   "name": "Text test",
+   "client": "LJN",
+   "type": "image",
+   "highlights": [],
+   "description": "test text task",
+   "admins": [
+      "data@test.com"
+   ],
+   "users": [],
+   "dataScientists": [],
+   "defaultTags": [
+      "To delete",
+      "To check",
+      "To discuss",
+      "quality",
+      "empty"
+   ],
+   "showPredictions": true,
+   "prefillPredictions": true,
+   "filterPredictionsMinimum": 0.4,
+   "deadline": "2022-07-31T09:41:24.456Z",
+   "entitiesRelationsGroup": [],
+   "s3": {
+      "accessKeyId": "YOUR_ACCESS_KEY",
+      "secretAccessKey": "YOR_SECRET_KEY"
+   }
+}

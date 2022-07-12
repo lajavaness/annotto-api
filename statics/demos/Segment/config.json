@@ -1,0 +1,64 @@
+{
+   "tasks": [
+      {
+         "conditions": [],
+         "exposed": true,
+         "type": "zone",
+         "annotationPourcent": 0,
+         "annotationCount": 0,
+         "_id": "62bc066ebf8ea6001e9294bf",
+         "project": "62bc066ebf8ea6001e9294be",
+         "description": "rectangle",
+         "color": "#73d13d",
+         "value": "rect",
+         "hotkey": "r",
+         "label": "rectangle",
+         "category": "Segment",
+         "updatedAt": "2022-06-29T07:59:42.925Z",
+         "createdAt": "2022-06-29T07:59:42.925Z",
+         "__v": 0
+      },
+      {
+         "conditions": [],
+         "exposed": true,
+         "type": "zone",
+         "annotationPourcent": 0,
+         "annotationCount": 0,
+         "_id": "62bc066ebf8ea6001e9294c0",
+         "project": "62bc066ebf8ea6001e9294be",
+         "description": "line",
+         "color": "#ff4d4f",
+         "value": "line",
+         "hotkey": "l",
+         "label": "line",
+         "category": "Segment",
+         "updatedAt": "2022-06-29T07:59:42.928Z",
+         "createdAt": "2022-06-29T07:59:42.928Z",
+         "__v": 0
+      }
+   ],
+   "name": "Segmentation test",
+   "client": "LJN",
+   "type": "image",
+   "highlights": [],
+   "description": "Detecting pertinent zones in the invoices",
+   "admins": [
+      "data@test.com"
+   ],
+   "users": [],
+   "dataScientists": [],
+   "defaultTags": [
+      "To delete",
+      "To check",
+      "To discuss"
+   ],
+   "showPredictions": true,
+   "prefillPredictions": true,
+   "filterPredictionsMinimum": 0.4,
+   "deadline": "2022-07-31T15:22:55.822Z",
+   "entitiesRelationsGroup": [],
+   "s3": {
+      "accessKeyId": "YOUR_ACCESS_KEY",
+      "secretAccessKey": "YOUR_SECRET_KEY"
+   }
+}
