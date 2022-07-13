@@ -1,0 +1,706 @@
+Index: app/utils/seeds.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/utils/seeds.js b/app/utils/seeds.js
+--- a/app/utils/seeds.js	(revision 50718508ab66e6d6767b55fae01cef9f9c30785c)
++++ b/app/utils/seeds.js	(revision d70cd105bd901edc1d32e7148b71de8352979c40)
+@@ -11,7 +11,7 @@
+ const toFile = (dirname, filename) => ({ path: path.join(dirname, filename) })
+ 
+ const createDemo = async () => {
+-  const demoPath = path.join(__dirname, '../../statics/demo/')
++  const demoPath = path.join(__dirname, '../../tests/integration/seed/demo/')
+   const demoFiles = fs.readdirSync(demoPath).map((name) => [name, fs.readdirSync(path.join(demoPath, name))])
+ 
+   try {
+Index: tests/integration/comments.test.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/integration/comments.test.js b/tests/integration/comments.test.js
+--- a/tests/integration/comments.test.js	(revision 50718508ab66e6d6767b55fae01cef9f9c30785c)
++++ b/tests/integration/comments.test.js	(revision d70cd105bd901edc1d32e7148b71de8352979c40)
+@@ -12,38 +12,38 @@
+ 
+ const DEMOS = [
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+ocr/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+ocr/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+ocr/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-nerWithRelations/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-nerWithRelations/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-nerWithRelations/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-classification-text-1/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-text-1/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-classification-text-1/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-ner+classification-text/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-ner+classification-text/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-ner+classification-text/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-public-image/items.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/items.jsonlines`,
+   },
+ ]
+ 
+Index: tests/integration/filters.test.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/integration/filters.test.js b/tests/integration/filters.test.js
+--- a/tests/integration/filters.test.js	(revision 50718508ab66e6d6767b55fae01cef9f9c30785c)
++++ b/tests/integration/filters.test.js	(revision d70cd105bd901edc1d32e7148b71de8352979c40)
+@@ -11,38 +11,38 @@
+ 
+ const DEMOS = [
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+ocr/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+ocr/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+ocr/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-nerWithRelations/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-nerWithRelations/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-nerWithRelations/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-classification-text-1/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-text-1/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-classification-text-1/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-ner+classification-text/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-ner+classification-text/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-ner+classification-text/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-public-image/items.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/items.jsonlines`,
+   },
+ ]
+ 
+Index: tests/integration/items.test.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/integration/items.test.js b/tests/integration/items.test.js
+--- a/tests/integration/items.test.js	(revision 50718508ab66e6d6767b55fae01cef9f9c30785c)
++++ b/tests/integration/items.test.js	(revision d70cd105bd901edc1d32e7148b71de8352979c40)
+@@ -15,45 +15,45 @@
+ const DEMOS = [
+   {
+     // 0
+-    config: `${process.cwd()}/statics/demo/demo-zone+ocr/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+ocr/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+ocr/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/predictions.jsonlines`,
+   },
+   {
+     // 1
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+     // 2
+-    config: `${process.cwd()}/statics/demo/demo-nerWithRelations/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-nerWithRelations/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-nerWithRelations/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/predictions.jsonlines`,
+   },
+   {
+     // 3
+-    config: `${process.cwd()}/statics/demo/demo-classification-text-1/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-text-1/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-classification-text-1/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/predictions.jsonlines`,
+   },
+   {
+     // 4
+-    config: `${process.cwd()}/statics/demo/demo-ner+classification-text/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-ner+classification-text/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-ner+classification-text/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/predictions.jsonlines`,
+   },
+   {
+     // 5
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+     // 6
+-    config: `${process.cwd()}/statics/demo/demo-classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-public-image/items.jsonlines`,
+-    itemsUpdate: `${process.cwd()}/statics/demo/demo-classification-public-image/items.update.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/items.jsonlines`,
++    itemsUpdate: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/items.update.jsonlines`,
+   },
+ ]
+ 
+Index: tests/integration/logs.test.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/integration/logs.test.js b/tests/integration/logs.test.js
+--- a/tests/integration/logs.test.js	(revision 50718508ab66e6d6767b55fae01cef9f9c30785c)
++++ b/tests/integration/logs.test.js	(revision d70cd105bd901edc1d32e7148b71de8352979c40)
+@@ -12,38 +12,38 @@
+ 
+ const DEMOS = [
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+ocr/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+ocr/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+ocr/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-nerWithRelations/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-nerWithRelations/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-nerWithRelations/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-classification-text-1/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-text-1/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-classification-text-1/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-ner+classification-text/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-ner+classification-text/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-ner+classification-text/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-public-image/items.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/items.jsonlines`,
+   },
+ ]
+ 
+Index: tests/integration/permissions.test.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/integration/permissions.test.js b/tests/integration/permissions.test.js
+--- a/tests/integration/permissions.test.js	(revision 50718508ab66e6d6767b55fae01cef9f9c30785c)
++++ b/tests/integration/permissions.test.js	(revision d70cd105bd901edc1d32e7148b71de8352979c40)
+@@ -14,45 +14,45 @@
+ let app
+ 
+ const DEMO_WITH_USER_THAT_DONT_EXIST = {
+-  config: `${process.cwd()}/statics/demo/demo-zone+ocr_with_user_that_dont_exist/config.json`,
+-  items: `${process.cwd()}/statics/demo/demo-zone+ocr_with_user_that_dont_exist/items.jsonlines`,
+-  predictions: `${process.cwd()}/statics/demo/demo-zone+ocr_with_user_that_dont_exist/predictions.jsonlines`,
++  config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/config.json`,
++  items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/items.jsonlines`,
++  predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/predictions.jsonlines`,
+ }
+ 
+ const DEMOS = [
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+ocr/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+ocr/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+ocr/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-nerWithRelations/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-nerWithRelations/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-nerWithRelations/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-classification-text-1/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-text-1/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-classification-text-1/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-ner+classification-text/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-ner+classification-text/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-ner+classification-text/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-public-image/items.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/items.jsonlines`,
+   },
+ ]
+ 
+Index: tests/integration/predictions.test.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/integration/predictions.test.js b/tests/integration/predictions.test.js
+--- a/tests/integration/predictions.test.js	(revision 50718508ab66e6d6767b55fae01cef9f9c30785c)
++++ b/tests/integration/predictions.test.js	(revision d70cd105bd901edc1d32e7148b71de8352979c40)
+@@ -11,38 +11,38 @@
+ 
+ const DEMOS = [
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+ocr/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+ocr/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+ocr/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-nerWithRelations/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-nerWithRelations/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-nerWithRelations/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-classification-text-1/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-text-1/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-classification-text-1/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-ner+classification-text/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-ner+classification-text/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-ner+classification-text/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-public-image/items.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/items.jsonlines`,
+   },
+ ]
+ 
+Index: tests/integration/project.test.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/integration/project.test.js b/tests/integration/project.test.js
+--- a/tests/integration/project.test.js	(revision 50718508ab66e6d6767b55fae01cef9f9c30785c)
++++ b/tests/integration/project.test.js	(revision d70cd105bd901edc1d32e7148b71de8352979c40)
+@@ -19,56 +19,56 @@
+ const DEMOS = [
+   {
+     // 0
+-    config: `${cwd}/statics/demo/demo-zone+ocr/config.json`,
+-    items: `${cwd}/statics/demo/demo-zone+ocr/items.jsonlines`,
+-    predictions: `${cwd}/statics/demo/demo-zone+ocr/predictions.jsonlines`,
++    config: `${cwd}/tests/integration/seed/demo/demo-zone+ocr/config.json`,
++    items: `${cwd}/tests/integration/seed/demo/demo-zone+ocr/items.jsonlines`,
++    predictions: `${cwd}/tests/integration/seed/demo/demo-zone+ocr/predictions.jsonlines`,
+   },
+   {
+     // 1
+-    config: `${cwd}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${cwd}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${cwd}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${cwd}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${cwd}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${cwd}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+     // 2
+-    config: `${cwd}/statics/demo/demo-nerWithRelations/config.json`,
+-    items: `${cwd}/statics/demo/demo-nerWithRelations/items.jsonlines`,
+-    predictions: `${cwd}/statics/demo/demo-nerWithRelations/predictions.jsonlines`,
++    config: `${cwd}/tests/integration/seed/demo/demo-nerWithRelations/config.json`,
++    items: `${cwd}/tests/integration/seed/demo/demo-nerWithRelations/items.jsonlines`,
++    predictions: `${cwd}/tests/integration/seed/demo/demo-nerWithRelations/predictions.jsonlines`,
+   },
+   {
+     // 3
+-    config: `${cwd}/statics/demo/demo-classification-text-1/config.json`,
+-    items: `${cwd}/statics/demo/demo-classification-text-1/items.jsonlines`,
+-    predictions: `${cwd}/statics/demo/demo-classification-text-1/predictions.jsonlines`,
++    config: `${cwd}/tests/integration/seed/demo/demo-classification-text-1/config.json`,
++    items: `${cwd}/tests/integration/seed/demo/demo-classification-text-1/items.jsonlines`,
++    predictions: `${cwd}/tests/integration/seed/demo/demo-classification-text-1/predictions.jsonlines`,
+   },
+   {
+     // 4
+-    config: `${cwd}/statics/demo/demo-ner+classification-text/config.json`,
+-    items: `${cwd}/statics/demo/demo-ner+classification-text/items.jsonlines`,
+-    predictions: `${cwd}/statics/demo/demo-ner+classification-text/predictions.jsonlines`,
++    config: `${cwd}/tests/integration/seed/demo/demo-ner+classification-text/config.json`,
++    items: `${cwd}/tests/integration/seed/demo/demo-ner+classification-text/items.jsonlines`,
++    predictions: `${cwd}/tests/integration/seed/demo/demo-ner+classification-text/predictions.jsonlines`,
+   },
+   {
+     // 5
+-    config: `${cwd}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${cwd}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${cwd}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${cwd}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${cwd}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${cwd}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+     // 6
+-    config: `${cwd}/statics/demo/demo-classification-public-image/config.json`,
+-    items: `${cwd}/statics/demo/demo-classification-public-image/items.jsonlines`,
++    config: `${cwd}/tests/integration/seed/demo/demo-classification-public-image/config.json`,
++    items: `${cwd}/tests/integration/seed/demo/demo-classification-public-image/items.jsonlines`,
+   },
+   {
+     // 7
+-    config: `${cwd}/statics/demo/demo-zone+annotations/config.json`,
+-    items: `${cwd}/statics/demo/demo-zone+annotations/items.jsonlines`,
+-    annotations: `${cwd}/statics/demo/demo-zone+annotations/annotations.jsonlines`,
++    config: `${cwd}/tests/integration/seed/demo/demo-zone+annotations/config.json`,
++    items: `${cwd}/tests/integration/seed/demo/demo-zone+annotations/items.jsonlines`,
++    annotations: `${cwd}/tests/integration/seed/demo/demo-zone+annotations/annotations.jsonlines`,
+   },
+   {
+     // 8
+-    config: `${cwd}/statics/demo/demo-nerWithRelations-2/config.json`,
+-    items: `${cwd}/statics/demo/demo-nerWithRelations-2/items.jsonlines`,
+-    annotations: `${cwd}/statics/demo/demo-nerWithRelations-2/annotations.jsonlines`,
++    config: `${cwd}/tests/integration/seed/demo/demo-nerWithRelations-2/config.json`,
++    items: `${cwd}/tests/integration/seed/demo/demo-nerWithRelations-2/items.jsonlines`,
++    annotations: `${cwd}/tests/integration/seed/demo/demo-nerWithRelations-2/annotations.jsonlines`,
+   },
+ ]
+ 
+Index: tests/integration/stats.test.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tests/integration/stats.test.js b/tests/integration/stats.test.js
+--- a/tests/integration/stats.test.js	(revision 50718508ab66e6d6767b55fae01cef9f9c30785c)
++++ b/tests/integration/stats.test.js	(revision d70cd105bd901edc1d32e7148b71de8352979c40)
+@@ -12,38 +12,38 @@
+ 
+ const DEMOS = [
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+ocr/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+ocr/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+ocr/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+ocr/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-nerWithRelations/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-nerWithRelations/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-nerWithRelations/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-nerWithRelations/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-classification-text-1/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-text-1/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-classification-text-1/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-classification-text-1/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-ner+classification-text/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-ner+classification-text/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-ner+classification-text/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-ner+classification-text/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/items.jsonlines`,
+-    predictions: `${process.cwd()}/statics/demo/demo-zone+classification-public-image/predictions.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines`,
++    predictions: `${process.cwd()}/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines`,
+   },
+   {
+-    config: `${process.cwd()}/statics/demo/demo-classification-public-image/config.json`,
+-    items: `${process.cwd()}/statics/demo/demo-classification-public-image/items.jsonlines`,
++    config: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/config.json`,
++    items: `${process.cwd()}/tests/integration/seed/demo/demo-classification-public-image/items.jsonlines`,
+   },
+ ]
+ 
+diff --git a/statics/demo/demo-classification-public-image/config.json b/tests/integration/seed/demo/demo-classification-public-image/config.json
+rename from statics/demo/demo-classification-public-image/config.json
+rename to tests/integration/seed/demo/demo-classification-public-image/config.json
+diff --git a/statics/demo/demo-classification-public-image/items.jsonlines b/tests/integration/seed/demo/demo-classification-public-image/items.jsonlines
+rename from statics/demo/demo-classification-public-image/items.jsonlines
+rename to tests/integration/seed/demo/demo-classification-public-image/items.jsonlines
+diff --git a/statics/demo/demo-classification-public-image/items.update.jsonlines b/tests/integration/seed/demo/demo-classification-public-image/items.update.jsonlines
+rename from statics/demo/demo-classification-public-image/items.update.jsonlines
+rename to tests/integration/seed/demo/demo-classification-public-image/items.update.jsonlines
+diff --git a/statics/demo/demo-classification-text-1/config.json b/tests/integration/seed/demo/demo-classification-text-1/config.json
+rename from statics/demo/demo-classification-text-1/config.json
+rename to tests/integration/seed/demo/demo-classification-text-1/config.json
+diff --git a/statics/demo/demo-classification-text-1/items.jsonlines b/tests/integration/seed/demo/demo-classification-text-1/items.jsonlines
+rename from statics/demo/demo-classification-text-1/items.jsonlines
+rename to tests/integration/seed/demo/demo-classification-text-1/items.jsonlines
+diff --git a/statics/demo/demo-classification-text-1/predictions.jsonlines b/tests/integration/seed/demo/demo-classification-text-1/predictions.jsonlines
+rename from statics/demo/demo-classification-text-1/predictions.jsonlines
+rename to tests/integration/seed/demo/demo-classification-text-1/predictions.jsonlines
+diff --git a/statics/demo/demo-classification-text-2/config.json b/tests/integration/seed/demo/demo-classification-text-2/config.json
+rename from statics/demo/demo-classification-text-2/config.json
+rename to tests/integration/seed/demo/demo-classification-text-2/config.json
+diff --git a/statics/demo/demo-classification-text-2/items.jsonlines b/tests/integration/seed/demo/demo-classification-text-2/items.jsonlines
+rename from statics/demo/demo-classification-text-2/items.jsonlines
+rename to tests/integration/seed/demo/demo-classification-text-2/items.jsonlines
+diff --git a/statics/demo/demo-classification-text-3/config.json b/tests/integration/seed/demo/demo-classification-text-3/config.json
+rename from statics/demo/demo-classification-text-3/config.json
+rename to tests/integration/seed/demo/demo-classification-text-3/config.json
+diff --git a/statics/demo/demo-classification-text-3/items.jsonlines b/tests/integration/seed/demo/demo-classification-text-3/items.jsonlines
+rename from statics/demo/demo-classification-text-3/items.jsonlines
+rename to tests/integration/seed/demo/demo-classification-text-3/items.jsonlines
+diff --git a/statics/demo/demo-classification-text-3/predictions.jsonlines b/tests/integration/seed/demo/demo-classification-text-3/predictions.jsonlines
+rename from statics/demo/demo-classification-text-3/predictions.jsonlines
+rename to tests/integration/seed/demo/demo-classification-text-3/predictions.jsonlines
+diff --git a/statics/demo/demo-classification-text-4-100k-items/config.json b/tests/integration/seed/demo/demo-classification-text-4-100k-items/config.json
+rename from statics/demo/demo-classification-text-4-100k-items/config.json
+rename to tests/integration/seed/demo/demo-classification-text-4-100k-items/config.json
+diff --git a/statics/demo/demo-classification-text-4-100k-items/items.jsonlines b/tests/integration/seed/demo/demo-classification-text-4-100k-items/items.jsonlines
+rename from statics/demo/demo-classification-text-4-100k-items/items.jsonlines
+rename to tests/integration/seed/demo/demo-classification-text-4-100k-items/items.jsonlines
+diff --git a/statics/demo/demo-ner+classification-text/annotations.jsonlines b/tests/integration/seed/demo/demo-ner+classification-text/annotations.jsonlines
+rename from statics/demo/demo-ner+classification-text/annotations.jsonlines
+rename to tests/integration/seed/demo/demo-ner+classification-text/annotations.jsonlines
+diff --git a/statics/demo/demo-ner+classification-text/config.json b/tests/integration/seed/demo/demo-ner+classification-text/config.json
+rename from statics/demo/demo-ner+classification-text/config.json
+rename to tests/integration/seed/demo/demo-ner+classification-text/config.json
+diff --git a/statics/demo/demo-ner+classification-text/items.jsonlines b/tests/integration/seed/demo/demo-ner+classification-text/items.jsonlines
+rename from statics/demo/demo-ner+classification-text/items.jsonlines
+rename to tests/integration/seed/demo/demo-ner+classification-text/items.jsonlines
+diff --git a/statics/demo/demo-ner+classification-text/predictions.jsonlines b/tests/integration/seed/demo/demo-ner+classification-text/predictions.jsonlines
+rename from statics/demo/demo-ner+classification-text/predictions.jsonlines
+rename to tests/integration/seed/demo/demo-ner+classification-text/predictions.jsonlines
+diff --git a/statics/demo/demo-nerWithRelations-2/annotations.jsonlines b/tests/integration/seed/demo/demo-nerWithRelations-2/annotations.jsonlines
+rename from statics/demo/demo-nerWithRelations-2/annotations.jsonlines
+rename to tests/integration/seed/demo/demo-nerWithRelations-2/annotations.jsonlines
+diff --git a/statics/demo/demo-nerWithRelations-2/config.json b/tests/integration/seed/demo/demo-nerWithRelations-2/config.json
+rename from statics/demo/demo-nerWithRelations-2/config.json
+rename to tests/integration/seed/demo/demo-nerWithRelations-2/config.json
+diff --git a/statics/demo/demo-nerWithRelations-2/items.jsonlines b/tests/integration/seed/demo/demo-nerWithRelations-2/items.jsonlines
+rename from statics/demo/demo-nerWithRelations-2/items.jsonlines
+rename to tests/integration/seed/demo/demo-nerWithRelations-2/items.jsonlines
+diff --git a/statics/demo/demo-nerWithRelations/config.json b/tests/integration/seed/demo/demo-nerWithRelations/config.json
+rename from statics/demo/demo-nerWithRelations/config.json
+rename to tests/integration/seed/demo/demo-nerWithRelations/config.json
+diff --git a/statics/demo/demo-nerWithRelations/items.jsonlines b/tests/integration/seed/demo/demo-nerWithRelations/items.jsonlines
+rename from statics/demo/demo-nerWithRelations/items.jsonlines
+rename to tests/integration/seed/demo/demo-nerWithRelations/items.jsonlines
+diff --git a/statics/demo/demo-nerWithRelations/predictions.jsonlines b/tests/integration/seed/demo/demo-nerWithRelations/predictions.jsonlines
+rename from statics/demo/demo-nerWithRelations/predictions.jsonlines
+rename to tests/integration/seed/demo/demo-nerWithRelations/predictions.jsonlines
+diff --git a/statics/demo/demo-zone+annotations/annotations.jsonlines b/tests/integration/seed/demo/demo-zone+annotations/annotations.jsonlines
+rename from statics/demo/demo-zone+annotations/annotations.jsonlines
+rename to tests/integration/seed/demo/demo-zone+annotations/annotations.jsonlines
+diff --git a/statics/demo/demo-zone+annotations/config.json b/tests/integration/seed/demo/demo-zone+annotations/config.json
+rename from statics/demo/demo-zone+annotations/config.json
+rename to tests/integration/seed/demo/demo-zone+annotations/config.json
+diff --git a/statics/demo/demo-zone+annotations/items.jsonlines b/tests/integration/seed/demo/demo-zone+annotations/items.jsonlines
+rename from statics/demo/demo-zone+annotations/items.jsonlines
+rename to tests/integration/seed/demo/demo-zone+annotations/items.jsonlines
+diff --git a/statics/demo/demo-zone+classification-public-image/config.json b/tests/integration/seed/demo/demo-zone+classification-public-image/config.json
+rename from statics/demo/demo-zone+classification-public-image/config.json
+rename to tests/integration/seed/demo/demo-zone+classification-public-image/config.json
+diff --git a/statics/demo/demo-zone+classification-public-image/items.jsonlines b/tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines
+rename from statics/demo/demo-zone+classification-public-image/items.jsonlines
+rename to tests/integration/seed/demo/demo-zone+classification-public-image/items.jsonlines
+diff --git a/statics/demo/demo-zone+classification-public-image/predictions.jsonlines b/tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines
+rename from statics/demo/demo-zone+classification-public-image/predictions.jsonlines
+rename to tests/integration/seed/demo/demo-zone+classification-public-image/predictions.jsonlines
+diff --git a/statics/demo/demo-zone+ocr/annotations.jsonlines b/tests/integration/seed/demo/demo-zone+ocr/annotations.jsonlines
+rename from statics/demo/demo-zone+ocr/annotations.jsonlines
+rename to tests/integration/seed/demo/demo-zone+ocr/annotations.jsonlines
+diff --git a/statics/demo/demo-zone+ocr/config.json b/tests/integration/seed/demo/demo-zone+ocr/config.json
+rename from statics/demo/demo-zone+ocr/config.json
+rename to tests/integration/seed/demo/demo-zone+ocr/config.json
+diff --git a/statics/demo/demo-zone+ocr/items.jsonlines b/tests/integration/seed/demo/demo-zone+ocr/items.jsonlines
+rename from statics/demo/demo-zone+ocr/items.jsonlines
+rename to tests/integration/seed/demo/demo-zone+ocr/items.jsonlines
+diff --git a/statics/demo/demo-zone+ocr/predictions.jsonlines b/tests/integration/seed/demo/demo-zone+ocr/predictions.jsonlines
+rename from statics/demo/demo-zone+ocr/predictions.jsonlines
+rename to tests/integration/seed/demo/demo-zone+ocr/predictions.jsonlines
+diff --git a/statics/demo/demo-zone+ocr_with_user_that_dont_exist/annotations.jsonlines b/tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/annotations.jsonlines
+rename from statics/demo/demo-zone+ocr_with_user_that_dont_exist/annotations.jsonlines
+rename to tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/annotations.jsonlines
+diff --git a/statics/demo/demo-zone+ocr_with_user_that_dont_exist/config.json b/tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/config.json
+rename from statics/demo/demo-zone+ocr_with_user_that_dont_exist/config.json
+rename to tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/config.json
+diff --git a/statics/demo/demo-zone+ocr_with_user_that_dont_exist/items.jsonlines b/tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/items.jsonlines
+rename from statics/demo/demo-zone+ocr_with_user_that_dont_exist/items.jsonlines
+rename to tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/items.jsonlines
+diff --git a/statics/demo/demo-zone+ocr_with_user_that_dont_exist/predictions.jsonlines b/tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/predictions.jsonlines
+rename from statics/demo/demo-zone+ocr_with_user_that_dont_exist/predictions.jsonlines
+rename to tests/integration/seed/demo/demo-zone+ocr_with_user_that_dont_exist/predictions.jsonlines

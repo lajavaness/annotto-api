@@ -11,7 +11,7 @@ const Project = require('../db/models/projects')
 const toFile = (dirname, filename) => ({ path: path.join(dirname, filename) })
 
 const createDemo = async () => {
-  const demoPath = path.join(__dirname, '../../statics/demo/')
+  const demoPath = path.join(__dirname, '../../statics/demos/')
   const demoFiles = fs.readdirSync(demoPath).map((name) => [name, fs.readdirSync(path.join(demoPath, name))])
 
   try {
